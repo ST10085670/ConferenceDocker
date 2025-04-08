@@ -4,7 +4,7 @@ services:
   conference-db:
     build:
       context: ./ConferenceDB  # Adjusted build context
-      dockerfile: DockerFile   # Dockerfile for the database
+      dockerfile: Dockerfile   # Dockerfile for the database
     container_name: conference-db
     environment:
       ACCEPT_EULA: "Y"
