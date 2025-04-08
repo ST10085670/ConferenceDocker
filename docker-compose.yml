@@ -19,3 +19,10 @@ services:
     restart: always
     networks:
     - conference-network
+
+networks:
+    conference-network:
+     driver: bride
+
+volumes:
+    db_data:
