@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  conference-db:
+    build:
+        context: ./ConferenceDB
+        dockerfile: DockerFile
+    container_name: conference-db
+    environment:
+        ACCEPT_EULA: "Y"
+        MSSQL_SA_PASSWORD: "Password1"
+        MSSQL_PID: "Express"
+    ports:
+     - "1433:1433"
+     - "1400:1423"
+    volumes:
+     - db_data:/var/opt/mssql
+     - ./logs:/var/opt/mssql/lag
+    restart: always
+    networks:
+    - conference-network
