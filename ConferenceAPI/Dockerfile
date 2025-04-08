@@ -5,9 +5,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
-EXPOSE 8081
-
-
+EXPOSE 8081 
 # Environment variable for connection string
 ENV SQL_CONNECTION_STRING="Server=host.docker.internal,1400;Database=Conference;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=Thandi@0312;"
 

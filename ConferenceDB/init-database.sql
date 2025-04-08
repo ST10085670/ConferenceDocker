@@ -60,7 +60,7 @@ VALUES
 GO
 
 -- Insert data into Registrations table 
-INSERT INTO Registrations (AttendeesID, SessionID, RegistrationDate)
+INSERT INTO Registrations (AttendeeID, SessionID, RegistrationDate)
 VALUES
 (1, 101, '2025-03-15'),
 (2, 102, '2025-03-20'),
